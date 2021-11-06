@@ -1,8 +1,6 @@
-quagga2-reader-qr
+quagga2-reader-datamatrix
 =================
 
-[![Join the chat at https://gitter.im/quaggaJS/Lobby](https://badges.gitter.im/quaggaJS/Lobby.svg)](https://gitter.im/quaggaJS/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+## Datamatrix Code Reader plugin for Quagga2
 
-## QR Code Reader plugin for Quagga2
-
-...to do
+For the ultimate troll move, zxing is used to decode datamatrix.

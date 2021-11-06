@@ -1,6 +1,6 @@
 {
-  "name": "@ericblade/quagga2-reader-qr",
-  "version": "1.0.3",
+  "name": "@mistressofjellyfish/quagga2-reader-datamatrix",
+  "version": "0.0.1",
   "description": "Experimental plugin reader for Quagga2 to read QR codes",
   "peerDependencies": {
     "@ericblade/quagga2": ">=1.2.4"
@@ -15,6 +15,7 @@
     "e2e": "npm run build:test-app && start-server-and-test run:test-server http-get://localhost:3000 cy:open",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -p tsconfig.node.json && tsc -p tsconfig.browser.json",
+    "up": "rollup -c --name 'Quagga2DatamatrixReader' ",
     "prepare": "npm run build"
   },
   "cross-os": {
@@ -25,13 +26,15 @@
       "win32": "cd example && npx cross-env BROWSER=none npm run start"
     }
   },
-  "author": "Eric Blade",
+  "author": "Katharina Bogad",
   "license": "MIT",
   "dependencies": {
-    "jsqr": "^1.3.1"
+    "@zxing/library": "^0.18.6",
+    "rollup": "^2.51.1"
   },
   "devDependencies": {
     "@ericblade/quagga2": "^1.2.4",
+    "@rollup/plugin-node-resolve": "^13.0.0",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "cypress": "^5.4.0",
     "eslint": "^7.11.0",
@@ -43,8 +46,6 @@
     "json-loader": "^0.5.7",
     "start-server-and-test": "^1.11.5",
     "ts-loader": "^8.0.6",
-    "typescript": "^4.0.3",
-    "webpack": "5.1.3",
-    "webpack-cli": "^4.1.0"
+    "typescript": "^4.0.3"
   }
 }
